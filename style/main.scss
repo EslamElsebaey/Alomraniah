@@ -1,0 +1,20 @@
+
+// Abstracts
+@import "sass/abstracts/variables";
+@import "sass/abstracts/mixins";
+
+// Base and fonts
+
+@import "sass/base/fonts";
+
+//Components
+
+@import "sass/components/header";
+@import "sass/components/main";
+@import "sass/components/about";
+@import "sass/components/products";
+@import "sass/components/footer";
+
+
+@import "sass/base/base";
+

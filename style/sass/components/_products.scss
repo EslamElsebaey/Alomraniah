@@ -1,0 +1,98 @@
+.products{
+    padding: 80px 0;
+    background-color: $main_color;
+    position: relative;
+    .wave1{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+    }
+    .wave2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: rotate(180deg) ;
+    }
+    h3{
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+}
+.product-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    margin-bottom: 20px;
+    img{
+        transition: all linear .3s;
+    }
+    
+  
+}
+.my-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    > a {
+        display: block;
+    }
+    .brand-name{
+        font-size: 18px;
+        display: block;
+        text-transform: capitalize;
+        color: #ffffff;
+        font-weight: 500;
+        text-align: center;
+        transition: all linear .2s;
+        &:hover{
+            text-decoration: none;
+            color: $second-color;
+        }
+    }
+}
+
+
+
+@include max-768 {
+    .product-item {
+        img{
+            width: 70px;
+            max-width: 100%;
+        }
+    }
+    .products h3{
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .products{
+        padding: 50px 0;
+    }
+    .my-col{
+        width: 50%;
+        
+    }
+  
+    .my-col .brand-name{
+        font-size: 14px;
+    }
+}
+
+
+
+@include max-992 {
+    .wave1 , .wave2 {
+        display: none;
+    }
+    .my-col:first-child , .my-col:nth-child(2){
+        margin-bottom: 35px;
+    }
+}

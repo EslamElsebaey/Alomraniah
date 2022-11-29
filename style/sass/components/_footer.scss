@@ -1,0 +1,205 @@
+footer{
+    padding: 90px 0 40px 0;
+    a:hover{
+        text-decoration: none;
+    }
+    h4{
+        font-size: 17.8px;
+        color: #0056b8;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+}
+.quick-links {
+ul li {
+    font-size: 16px;
+    line-height: 32px;
+   a{
+    color: #000000;
+    text-transform: capitalize;
+    transition: all linear .3s;
+    &:hover{
+        color: $second-color;
+    }
+   }
+}
+}
+.quick-drop{
+    display: flex;
+    max-height: 159px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    li{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        .phone , .envelope , .whatsapp{
+            color: $main-color;
+            font-size: 18px;
+            line-height: 29px;
+            text-align: center;
+        }
+        a{
+            font-size: 16px;
+            margin-inline-start: 15px;
+            color: #000000;
+            transition: all linear .3s;
+            &:hover{
+                color: $second-color;
+            }
+        }
+     
+    }
+}
+.newsletter{
+    p{
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 25px;
+        
+    }
+}
+
+.message {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    input{
+        width: 358px;
+        transition: all linear .3s;
+        height: 45px;
+        max-width: 100%;
+        border-radius: 22px;
+        background-color: #f5f5f5;
+        outline: none !important;
+        border: 1px solid transparent;
+        color: #a6a6a6;
+        padding: 0 25px 0 50px;
+        font-size: 16px;
+        font-weight: 400;
+        &::placeholder{
+            color: #a6a6a6;
+            font-size: 15px;
+        }
+        &:focus{
+            border-color: $main-color !important;
+        }
+    }
+    .mail-icon{
+        color: $main-color;
+        position: absolute;
+        top: 50%;
+        inset-inline-end: 25px;
+        transform: translateY(-50%);
+    }
+}
+
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 44px;
+        color: #000000;
+        margin-bottom: 0;
+    }
+     a:first-child img{
+        width: 45px;
+    }
+    a:last-child img {
+        width: 110px;
+        max-width: 100%;
+    }
+}
+
+
+
+
+@include max-768 {
+    .contact ul li{
+        margin-bottom: 15px;
+    }
+    footer{
+        padding: 50px 0 30px 0;
+    }
+    .quick-drop , .contact ul , .newsletter .nested{
+        display: none;
+    }
+    .copyright{
+        margin-top: 25px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        a{
+            margin-bottom: 10px;
+        }
+    }
+    .message input{
+        &::placeholder{
+            font-size: 13px;
+        }
+    }
+    .quick-drop{
+        flex-wrap: nowrap;
+        overflow-y: auto;
+    }
+    .arrow-rotate::after {
+        transform: translateY(-50%) rotate(180deg)  !important;
+        top: 10px;
+    }
+   
+    .quick-links ul li{
+        font-size: 14px;
+    }
+    .contact ul li a{
+        font-size: 14px;
+    }
+    .newsletter p{
+        font-size: 14px;
+    }
+    .copyright p{
+        order: 5;
+        text-align: center;
+        line-height: 25px;
+        font-size: 13px;
+    }
+    footer h4{
+        margin-bottom: 0;
+        text-transform: capitalize;
+        padding-bottom: 20px;
+        cursor: pointer;
+        font-size: 15px;
+        position: relative;
+        &::after {
+            font-size: 17px;
+            content: "\f107";
+            transition: all linear .3s;
+            font-family: "line Awesome free";
+            position: absolute;
+            inset-inline-end: 0;
+            top: 0;
+            
+
+            
+        }
+    }
+}
+
+
+@include min-768 {
+    footer h4 {
+        pointer-events: none;
+    }
+}
