@@ -30,6 +30,7 @@
 }
 
 .about-desc {
+    margin-bottom: 45px;
     h2{
         margin-bottom: 20px;
         font-size: 32px;
@@ -41,9 +42,11 @@
         color: #ffffff;
         font-size: 14px;
         font-weight: 500;
-        padding: 10.5px 37px;
+        padding: 0px 36px;
+        height: 42px;
         text-transform: capitalize;
         border-radius: 21px;
+        border: 1px solid $second-color;
         background-color: $second-color;
         transition: all  linear .3s;
         &:hover{
@@ -131,7 +134,8 @@
     }
   
     .about-desc .btn_es{
-        padding: 6px 16px;
+        height: 40px;
+        padding: 0 25px;
     }
     .vision h3{
         font-size: 17px;
