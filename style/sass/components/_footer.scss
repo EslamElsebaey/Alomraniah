@@ -85,7 +85,6 @@ ul li {
         position: absolute;
         inset-inline-end: 25px;
         transform: translateY(-50%);
-        // position: absolute;
         top: 50%;
     }
     input{
@@ -101,7 +100,8 @@ ul li {
         padding: 0 25px 0 50px;
         font-size: 16px;
         font-weight: 400;
-        &::placeholder{
+        ::-webkit-input-placeholder { line-height: 1.4em !important; }
+        &::-webkit-input-placeholder{
             color: #a6a6a6;
             font-size: 15px;
         }
@@ -152,7 +152,7 @@ ul li {
         display: none;
     }
     .copyright{
-        margin-top: 25px;
+        margin-top: 30px;
         flex-wrap: wrap;
         justify-content: space-evenly;
         a{
@@ -160,6 +160,7 @@ ul li {
         }
     }
     .message input{
+       
         &::placeholder{
             font-size: 13px;
         }
@@ -167,6 +168,7 @@ ul li {
     .quick-drop{
         flex-wrap: nowrap;
         overflow-y: auto;
+        padding-bottom: 10px;
     }
     .arrow-rotate::after {
         transform: translateY(-50%) rotate(180deg)  !important;

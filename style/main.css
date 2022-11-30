@@ -262,6 +262,9 @@ nav {
     transform: translateY(-50%) rotate(180deg) !important;
     top: 14px !important;
   }
+  html[dir=rtl] .li-drop .ul-drop a {
+    text-align: right;
+  }
   .li-drop {
     flex-direction: column;
     align-items: flex-start !important;
@@ -350,6 +353,14 @@ nav {
     -webkit-margin-end: 0;
             margin-inline-end: 0;
     width: 100%;
+  }
+  .nav-ul > li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-ul > li a::after {
+    height: auto;
   }
   .closeBtn {
     width: 37px;
@@ -531,13 +542,13 @@ figure::after {
     font-size: 20px;
     margin: 0;
     padding: 0;
-    margin-bottom: 5px;
   }
   .banner-desc h4 {
     font-size: 13px;
     margin: auto;
     line-height: 20px;
     font-weight: 400;
+    max-width: 70%;
   }
 }
 .about {
@@ -892,15 +903,10 @@ footer h4 {
   font-size: 16px;
   font-weight: 400;
 }
-.message input::-moz-placeholder {
-  color: #a6a6a6;
-  font-size: 15px;
+.message input ::-webkit-input-placeholder {
+  line-height: 1.4em !important;
 }
-.message input:-ms-input-placeholder {
-  color: #a6a6a6;
-  font-size: 15px;
-}
-.message input::placeholder {
+.message input::-webkit-input-placeholder {
   color: #a6a6a6;
   font-size: 15px;
 }
@@ -943,7 +949,7 @@ footer h4 {
     display: none;
   }
   .copyright {
-    margin-top: 25px;
+    margin-top: 30px;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
@@ -962,6 +968,7 @@ footer h4 {
   .quick-drop {
     flex-wrap: nowrap;
     overflow-y: auto;
+    padding-bottom: 10px;
   }
   .arrow-rotate::after {
     transform: translateY(-50%) rotate(180deg) !important;

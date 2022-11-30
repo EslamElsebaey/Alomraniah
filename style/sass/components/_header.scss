@@ -64,6 +64,7 @@ nav{
         justify-content: flex-start;
         align-items: center;
         a{
+          
             color: $main-color;
             font-size: 16px;
             text-transform: capitalize;
@@ -225,6 +226,11 @@ nav{
         top: 14px !important;
     }
 
+    html[dir="rtl"]{
+        .li-drop .ul-drop a{
+            text-align: right;
+        }
+    }
     
     .li-drop {
         flex-direction: column;
@@ -319,6 +325,14 @@ nav{
         margin-bottom: 20px;
         margin-inline-end: 0;
         width: 100%;
+        a{
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &::after{
+                height: auto;
+            }
+        }
     }
     .closeBtn{
         width: 37px;
