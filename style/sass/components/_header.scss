@@ -1,9 +1,6 @@
 //  header
 html[dir="ltr"]{
     .lang  {
-        a{
-            flex-direction: row-reverse;
-        }
         span{
             font-size: 13px;
         }
@@ -46,7 +43,7 @@ nav{
         color: $main-color;
     }
     img{
-      margin-right: 10px;
+      margin-inline-start: 10px;
     }
    
 }

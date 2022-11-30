@@ -26,9 +26,6 @@
   font-style: normal;
   font-display: swap;
 }
-html[dir=ltr] .lang a {
-  flex-direction: row-reverse;
-}
 html[dir=ltr] .lang span {
   font-size: 13px;
 }
@@ -73,7 +70,8 @@ nav {
   color: #0056b8;
 }
 .lang a img {
-  margin-right: 10px;
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
 }
 
 .nav-ul {
@@ -975,7 +973,6 @@ footer h4 {
   .quick-drop {
     flex-wrap: nowrap;
     overflow-y: auto;
-    padding-bottom: 10px;
   }
   .arrow-rotate::after {
     transform: translateY(-50%) rotate(180deg) !important;
