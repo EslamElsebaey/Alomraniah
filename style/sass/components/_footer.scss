@@ -1,3 +1,11 @@
+html[dir = "ltr"]{
+    .message {
+        input {
+            padding: 0 50px 0 25px;
+        }
+    }
+}
+
 footer{
     padding: 90px 0 40px 0;
     a:hover{
@@ -73,6 +81,13 @@ ul li {
     display: inline-block;
     width: auto;
     max-width: 100%;
+    button {
+        position: absolute;
+        inset-inline-end: 25px;
+        transform: translateY(-50%);
+        // position: absolute;
+        top: 50%;
+    }
     input{
         width: 358px;
         transition: all linear .3s;
@@ -96,10 +111,8 @@ ul li {
     }
     .mail-icon{
         color: $main-color;
-        position: absolute;
-        top: 50%;
-        inset-inline-end: 25px;
-        transform: translateY(-50%);
+       
+       
     }
 }
 

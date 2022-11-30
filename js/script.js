@@ -66,16 +66,16 @@ const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
 
 // hovering on products images
 
-$(".my-col a").mouseenter(function(){
-  $(this).css("color", "#1d9add");
-  $(this).prev().children().css("filter" , "brightness(0) saturate(100%) invert(56%) sepia(17%) saturate(2499%) hue-rotate(162deg) brightness(89%) contrast(95%)");
-   $(this).prev().children().children().css("transform" , "scale(1.2)");
-})
-$(".my-col a").mouseleave(function(){
-  $(this).css("color", "#fff");
-  $(this).prev().children().css("filter" , "none");
-  $(this).prev().children().children().css("transform" , "scale(1)");
-})
+// $(".my-col a").mouseenter(function(){
+//   $(this).css("color", "#1d9add");
+//   $(this).prev().children().css("filter" , "brightness(0) saturate(100%) invert(56%) sepia(17%) saturate(2499%) hue-rotate(162deg) brightness(89%) contrast(95%)");
+//    $(this).prev().children().children().css("transform" , "scale(1.2)");
+// })
+// $(".my-col a").mouseleave(function(){
+//   $(this).css("color", "#fff");
+//   $(this).prev().children().css("filter" , "none");
+//   $(this).prev().children().children().css("transform" , "scale(1)");
+// })
 
 /************************************************************************ */
 
@@ -123,7 +123,7 @@ if($(window).width() <= 768) {
 $(".li-drop").click(function (e) {
   e.preventDefault() ;
   $(".ul-drop").slideToggle(1000) ;
-  $(this).toggleClass("icon-rotate");
+  $(this).children().toggleClass("icon-rotate");
   })
 }
 

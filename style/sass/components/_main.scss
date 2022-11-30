@@ -64,42 +64,54 @@
 .swiper-slide{
     width: 100% !important;
 }
+.mainslider-item{
+    position: relative;
+}
+.banner-desc{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50% , -50%);
+   h1{
+    font-size: 48px;
+    line-height: 44px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+   }
+   h4{
+    font-size: 22px;
+    max-width: 50%;
+    margin: auto;
+    line-height: 36px;
+    color: #ffffff;
+    font-weight: 500;
+}
 
-.banner-overlay{
+}
+
+figure{
+    position: relative;
+}
+
+figure::after{
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
     left: 0;
+    top: 0;
     background-color: rgba($color: #000000, $alpha: 0.102);
     z-index: 2;
-    .banner-desc{
-        text-align: center;
-    }
 }
 
 
 
-.banner-overlay {
-    h1{
-        font-size: 48px;
-line-height: 44px;
-color: #ffffff;
-font-weight: 700;
-text-align: center;
-margin-bottom: 30px;
-    }
-    h4{
-        font-size: 22px;
-        width: 651px;
-        line-height: 36px;
-        color: #ffffff;
-        font-weight: 500;
-    }
-}
 
 @include min-1200{
     .mainBanner{
@@ -116,17 +128,25 @@ margin-bottom: 30px;
         display: none;
     }
 
-    .banner-overlay h1{
+    .banner-desc h1{
         font-size: 20px;
         margin: 0;
         padding: 0;
         margin-bottom: 5px;
     }
-    .banner-overlay h4{
+    .banner-desc h4{
         font-size: 13px;
-        width: 80%;
         margin: auto;
         line-height: 20px;
         font-weight: 400;
     }
 }
+
+// @include min-992 {
+//     .banner-desc {
+//         h4 {
+//             width: 50%;
+//             margin: auto;
+//         }
+//     }
+// }

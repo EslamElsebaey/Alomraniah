@@ -73,11 +73,16 @@
       <div class="search">
         <div class="search-holder">
           <input type="text" placeholder="Search">
-          <i class="fa-solid search-icon fa-magnifying-glass"></i>
+          <button class="searchButton btn_es" > <i class="fa-solid search-icon fa-magnifying-glass"></i></button>
+         
         </div>
       </div>
       <div class="lang">
-        <a href="arabic.html"><img src="images/ar.webp" alt="image"></a>
+        <a  href="arabic.html"  class="text-capitalize">
+          <span>عربي</span> 
+          <img src="images/english.webp" alt="image">
+        
+        </a>
       </div>
       <div class="openBtn">
         <i class="las la-bars"></i>
@@ -94,28 +99,13 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="mainslider-item text-center">
-              <a href="#">
-                <img  src="images/main.webp" />
-              </a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="mainslider-item text-center">
-              <a href="#">
-                <img class="img-responsive"  src="images/main.webp" />
-              </a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="mainslider-item text-center">
-                <img class="img-responsive"  src="images/main.webp" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="mainslider-item text-center">
-              <a href="#">
-                <img class="img-responsive"  src="images/main.webp" />
-              </a>
+             <figure>
+              <img  src="images/main.webp" />
+             </figure>
+              <div class="banner-desc">
+                  <h1>Building materials company </h1>
+                  <h4>  Leader in the manufacture of terrazzo tiles, blocks, cement tiles, interlocks and balustrades for more than 50 years in the Middle East </h4>
+              </div>
             </div>
           </div>
         </div>
@@ -126,12 +116,6 @@
       </div>
       <div class="main-swiper swiper-button-next">
         <i class="fa-solid fa-arrow-right-long"></i>
-      </div>
-      <div class="banner-overlay">
-        <div class="banner-desc">
-          <h1>Building materials company</h1>
-         <h4>Leader in the manufacture of terrazzo tiles, blocks, cement tiles, interlocks and balustrades for more than 50 years in the Middle East</h4>
-        </div>
       </div>
     </div>
    
@@ -207,36 +191,48 @@
     <h3>Our products</h3>
     <div class="row">
       <div class="col-lg-3 col-md-6   my-col ">
-        <a href="images/ceramic.webp" data-fancybox="gallery">
-          <div class="product-item">
-            <img src="images/ceramic.webp" alt="image">
-          </div>
-        </a>
-        <a class="brand-name" href="#">Ceramic</a>
+        <div class="product-item-parent">
+          <a href="#" >
+            <div class="product-item">
+              <img src="images/ceramic.webp" alt="image">
+            </div>
+          </a>
+          <a class="brand-name" href="#">Ceramic</a>
+        </div>
+       
       </div>
       <div class="col-lg-3 col-md-6 my-col">
-        <a href="images/grid.webp" data-fancybox="gallery" >
-          <div class="product-item">
-            <img src="images/grid.webp" alt="image">
-          </div>
-        </a>
-        <a class="brand-name" href="#">soles</a>
+        <div class="product-item-parent">
+          <a href="#"  >
+            <div class="product-item">
+              <img src="images/grid.webp" alt="image">
+            </div>
+          </a>
+          <a class="brand-name" href="#">soles</a>
+        </div>
+       
       </div>
       <div class="col-lg-3 col-md-6 my-col">
-        <a href="images/interlock.webp" data-fancybox="gallery">
-          <div class="product-item">
-            <img src="images/interlock.webp" alt="image">
-          </div>
-        </a>
-        <a class="brand-name" href="#">interlock</a>
+        <div class="product-item-parent">
+          <a href="#" >
+            <div class="product-item">
+              <img src="images/interlock.webp" alt="image">
+            </div>
+          </a>
+          <a class="brand-name" href="#">interlock</a>
+        </div>
+      
       </div>
       <div class="col-lg-3 col-md-6 my-col">
-        <a href="images/block.webp" data-fancybox="gallery">
-          <div class="product-item">
-            <img src="images/block.webp" alt="image">
-          </div>
-        </a>
-        <a class="brand-name" href="#">block</a>
+        <div class="product-item-parent">
+          <a href="#" >
+            <div class="product-item">
+              <img src="images/block.webp" alt="image">
+            </div>
+          </a>
+          <a class="brand-name" href="#">block</a>
+        </div>
+       
       </div>
     </div>
   </div>
@@ -302,7 +298,10 @@
             <p>Subscribe to the mail to receive our news</p>
             <div class="message">
               <input type="text" placeholder="Enter your mail">
-              <i class="fa-solid mail-icon fa-arrow-right"></i>
+              <button class="btn_es">
+                <i class="fa-solid mail-icon fa-arrow-right"></i>
+              </button>
+             
             </div>
           </div>
         </div>
@@ -328,7 +327,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/script.js"></script>

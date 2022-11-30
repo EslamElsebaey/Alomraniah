@@ -1,4 +1,17 @@
 //  header
+html[dir="ltr"]{
+    .lang  {
+        a{
+            flex-direction: row-reverse;
+        }
+        span{
+            font-size: 13px;
+        }
+    }
+    .search-holder input{
+        padding: 0 50px 0 25px;
+    }
+}
 header{
     padding: 20px 0;
     background-color: $white-color;
@@ -21,12 +34,21 @@ nav{
         max-width: 100%;
     }
 }
-.lang{
-    a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.lang a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #808080;
+    transition: all linear .3s;
+    &:hover{
+        text-decoration: none ;
+        color: $main-color;
     }
+    img{
+      margin-right: 10px;
+    }
+   
 }
 
 .nav-ul {
@@ -80,16 +102,30 @@ nav{
         color: #a6a6a6;
     }
 }
-.search-icon{
+.searchButton{
     position: absolute;
    top: 50%;
    font-size: 14px;
    transform:  translateY(-50%) ;
-   left: 19px;
+   inset-inline-end: 19px;
    color: $main-color;
 }
 .li-drop {
     position: relative;
+     > a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after{
+            content: "\f107";
+            font-family: "line Awesome free";
+            font-weight: 900;
+            font-size: 11px;
+            height: 10px;
+            margin-inline-start: 2px;
+        }
+    }
     &:hover{
         .ul-drop {
             opacity: 1;
@@ -193,16 +229,17 @@ nav{
     .li-drop {
         flex-direction: column;
         align-items: flex-start !important;
-        &::after{
-            content: "\f078";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            transition: all linear 0.3s;
-            font-family: "line Awesome free";
-            position: absolute;
-            inset-inline-end: 0px;
-            top: 4px;
-            color: $main-color;
+        a{
+            display: block;
+            width: 100%;
+            &::after{
+                transition: all linear .3s;
+                position: absolute;
+                inset-inline-end: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 16px;
+            }
         }
        .ul-drop{
         transition: none;

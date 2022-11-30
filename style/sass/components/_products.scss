@@ -28,11 +28,11 @@
 .product-item{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     min-height: 72px;
     margin-bottom: 20px;
     img{
-        transition: all linear .3s;
+        transition: transform linear .3s;
     }
     
   
@@ -60,6 +60,20 @@
     }
 }
 
+
+.product-item-parent:hover {
+    .brand-name{
+        text-decoration: none !important;
+        color: $second-color !important;
+    }
+        .product-item {
+        img{
+            filter: brightness(0) saturate(100%) invert(56%) sepia(17%) saturate(2499%) hue-rotate(162deg) brightness(89%) contrast(95%);
+            transform: scale(1.2);
+        }
+    }
+
+} 
 
 
 @include max-768 {
