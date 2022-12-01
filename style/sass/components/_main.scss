@@ -67,6 +67,9 @@
 .mainslider-item{
     position: relative;
 }
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev i {
+    font-size: 24px;
+}
 .banner-desc{
     width: 100%;
     text-align: center;
@@ -134,11 +137,7 @@ figure::after{
         padding: 0;
     }
     .banner-desc h4{
-        font-size: 13px;
-        margin: auto;
-        line-height: 20px;
-        font-weight: 400;
-        max-width: 70%;
+        display: none;
     }
 }
 

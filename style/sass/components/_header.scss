@@ -1,6 +1,6 @@
 //  header
 html[dir="ltr"]{
-    .lang  {
+    .lang  , .lang2 {
         span{
             font-size: 13px;
         }
@@ -31,7 +31,7 @@ nav{
         max-width: 100%;
     }
 }
-.lang a{
+.lang a , .lang2 a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,13 +75,13 @@ nav{
         }
     }
 }
-.search-holder{
+.search-holder-input{
     position: relative;
     width: 238px;
     max-width: 100%;
     height: 40px;
 }
-.search-holder input{
+.search-holder-input input{
     width: 100%;
     color: #a6a6a6;
     height: 100%;
@@ -101,12 +101,23 @@ nav{
     }
 }
 .searchButton{
-    position: absolute;
-   top: 50%;
    font-size: 14px;
-   transform:  translateY(-50%) ;
-   inset-inline-end: 19px;
    color: $main-color;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   inset-inline-end: 20px;
+   i {
+    font-size: 18px;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+   
+    transform: scaleX(-1);
+   }
 }
 .li-drop {
     position: relative;
@@ -163,9 +174,8 @@ nav{
         }
     }
 }
-.openBtn
-{
-    display: none;
+.openNav-btn{
+    display: none !important;
     cursor: pointer;
     i {
         font-size: 28px;
@@ -173,22 +183,17 @@ nav{
        
     }
 }
-.show-search{
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-.closeBtn{
+
+.closeNav-btn{
     display: none;
     cursor: pointer;
 }
-.english{
-    display: none !important;
-}
-.searchBtn{
+.openSearch-btn{
     cursor: pointer;
-    .svg-inline--fa {
+    i{
         color: $main-color;
-        font-size: 20px;
+        font-size: 23px;
+        transform: scaleX(-1);
     }
 }
 .close-search {
@@ -208,17 +213,20 @@ nav{
             max-width: 100%;
         }
     }
-    .search{
-        order: 5 ;
-        width: 100%  ;
-        margin-top: 20px;
-    }
   .search-holder{
     width: 100%;
   }
 }
 
 @include max-768 {
+    
+    header{
+        padding: 10px 0;
+    }
+    
+.showSearch-box{
+    display: flex !important;
+ }
     .icon-rotate::after{
         transform: translateY(-50%) rotate(180deg)  !important;
         top: 14px !important;
@@ -229,7 +237,48 @@ nav{
             text-align: right;
         }
     }
+    .search-holder-parent{
+        transition: all linear .3s;
+        background-color: rgba($color: #000000, $alpha: .6);
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+    .search-holder{
+        padding: 30px;
+        justify-content: space-between;
+        height: 163px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        width: 90%;
+        top: 21%;
+        border-radius: 10px;
+        i {
+            font-size: 20px;
+            color: $main-color;
+        }
+        .search-holder-input{
+            width: 100%;
+        }
+    }
     
+    .search-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .openNav-btn{
+        margin-inline-start: 20px;
+    }
     .li-drop {
         flex-direction: column;
         align-items: flex-start !important;
@@ -265,39 +314,15 @@ nav{
         width: 120px;
         max-width: 100%;
     }
-    .search{
-    display: block !important;
-    transition: all linear 0.3s;
-    position: absolute;
-    z-index: 100;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: 0;
-        
-    }
-  
-    header{
-        padding: 10px 0;
-    }
     .header-content{
         position: relative;
         width: 100%;
-      
     }
-    header .container {
-        padding: 0;
-        padding: 0 35px;
-    }
-    .openBtn{
-        display: block;
+    .openNav-btn{
+        display: block !important;
     }
     .lang{
         display: none;
-       
     }
     .banner-overlay{
         display: none;
@@ -316,7 +341,6 @@ nav{
     .nav-ul{
         flex-direction: column;
         margin: 80px 0 0 0 !important;
-        // position: absolute;
         align-items: flex-start;
     }
     .nav-ul > li{
@@ -332,16 +356,10 @@ nav{
             }
         }
     }
-    .closeBtn{
-        width: 37px;
-        height: 37px;
-        background: #efefef;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .svg-inline--fa{
-            font-size: 21px;
+    .closeNav-btn{
+      display: block;
+        i{
+            font-size: 25px;
             color: $main-color;
         }
     }
@@ -350,14 +368,35 @@ nav{
         align-items: center;
         justify-content: space-between;
     }
-    .english{
-        display: block !important;
+
+    .close-lang-holder{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+    .lang2 a img  {
+        margin-inline-start: 5px;
+        margin-bottom: -1px;
+    }
+   
 }
 
 
 
+
 @include min-768{
+    .closeSearh-btn{
+        display: none !important;
+    }
+    .close-lang-holder{
+        display: none;
+    }
+    .lang2{
+        display: none;
+    }
+    .openSearch-btn{
+        display: none !important;
+    }
     .contactus{
         margin-inline-end: 0 !important;
     }
@@ -381,19 +420,30 @@ nav{
     .nav-ul > li{
         margin-inline-end: 12px;
     }
-    .search-holder {
+    .search-holder-input {
         width: 220px;
     }
 
 } 
 
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     
-    html[dir="ltr"] {
-        .nav-ul > li a{
-            font-size: 13px;
-        }
+    .search-holder-input{
+        width: 100%;
     }
+   
+        .search-section {
+            width: 100%;
+            order: 5;
+            margin-top: 15px;
+        }
+    
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .nav-ul > li a{
+        font-size: 13px;
+    }
+}

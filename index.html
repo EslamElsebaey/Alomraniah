@@ -41,16 +41,18 @@
         <a href="index.html"> <img src="images/logo.webp" alt="image"></a>
       </div>
       <nav class="open-nav">
-        <div class="close-search">
-          <div class="searchBtn">
-            <i class="fa-solid  fa-magnifying-glass"></i>
+        <div class="close-lang-holder">
+          <div class="lang2">
+            <a  href="en.html"  class="text-capitalize">
+              <span>English</span> 
+              <img src="images/english.webp" alt="image">
+            </a>
           </div>
-          <div class="closeBtn">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-        
+          <button class=" btn_es closeNav-btn">
+            <i class="las la-times"></i>
+          </button>
         </div>
-       
+        
         <ul class="ul-es nav-ul">
           <li><a href="#">الرئيسية</a></li>
           <li><a href="#">عن الشركة</a></li>
@@ -66,17 +68,24 @@
           <li><a href="#">مشاريعنا</a></li>
           <li><a href="#">شركاء النجاح</a></li>
           <li class="contactus"><a href="#">اتصل بنا</a></li>
-         <li class="english">
-          
-          <a href="en.html">English</a>
-         </li>
         </ul>
       </nav>
-      <div class="search">
-        <div class="search-holder">
-          <input type="text" placeholder="البحث">
-          <button class="searchButton btn_es"> <i class="fa-solid search-icon fa-magnifying-glass"></i></button>
-        </div>
+      <div class="search-section">
+          <button class="openSearch-btn btn_es">
+            <i class="las la-search"></i>
+          </button>
+          <button class=" btn_es  openNav-btn">
+            <i class="las la-bars"></i>
+          </button>
+          <div class="search-holder-parent">
+            <div class="search-holder">
+              <button class="btn_es closeSearh-btn "><i class="las la-times"></i></button>
+              <div class="search-holder-input">
+                <input type="text" placeholder="البحث">
+                <button class="searchButton btn_es"> <i class="las search-icon la-search"></i></button>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="lang">
         <a  href="en.html"  class="text-capitalize">
@@ -84,9 +93,7 @@
           <img src="images/english.webp" alt="image">
         </a>
       </div>
-      <div class="openBtn">
-        <i class="las la-bars"></i>
-      </div>
+     
     </div>
   </div>
 </header>
@@ -112,10 +119,10 @@
       </div>
       <div class="swiper-pagination"></div>
       <div class="main-swiper swiper-button-prev">
-        <i class="fa-solid fa-arrow-left-long"></i>
+        <i class="las la-long-arrow-alt-left"></i>
       </div>
       <div class="main-swiper swiper-button-next">
-        <i class="fa-solid fa-arrow-right-long"></i>
+        <i class="las la-long-arrow-alt-right"></i>
       </div>
     </div>
    
@@ -273,15 +280,15 @@
           <h4>يسعدنا تواصلكم معنا</h4>
           <ul class="ul-es">
             <li>
-              <i class="fa-solid phone  fa-fw fa-phone-flip"></i>
+              <i class="las phone la-phone"></i>
               <a href="tel:05501220517">05501220517</a>
             </li>
             <li>
-              <i class="fa-solid fa-fw envelope fa-envelope"></i>
+              <i class="las envelope la-envelope"></i>
               <a href="mailto:info@comaco.sa">info@comaco.sa</a>
             </li>
             <li>
-              <i class="fa-brands fa-fw whatsapp fa-whatsapp"></i>
+              <i class="lab whatsapp la-whatsapp"></i>
               <a href="sms:00966597343064">00966597343064</a>
             </li>
           </ul>
@@ -295,7 +302,7 @@
             <div class="message">
               <input type="text" placeholder="ادخل بريدك الالكترونى">
               <button class="btn_es">
-                <i class="fa-solid mail-icon fa-arrow-left"></i>
+                <i class="las mail-icon la-arrow-left"></i>
               </button>
             </div>
           </div>

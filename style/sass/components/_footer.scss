@@ -22,7 +22,7 @@ footer{
 .quick-links {
 ul li {
     font-size: 16px;
-    line-height: 32px;
+    line-height: 31px;
    a{
     color: #000000;
     text-transform: capitalize;
@@ -35,7 +35,7 @@ ul li {
 }
 .quick-drop{
     display: flex;
-    max-height: 159px;
+    height: 150px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -48,11 +48,10 @@ ul li {
         padding: 0;
         margin-bottom: 20px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         .phone , .envelope , .whatsapp{
             color: $main-color;
-            font-size: 18px;
-            line-height: 29px;
+            font-size: 20px;
             text-align: center;
         }
         a{
@@ -111,8 +110,7 @@ ul li {
     }
     .mail-icon{
         color: $main-color;
-       
-       
+        font-size: 21px;
     }
 }
 
@@ -142,8 +140,20 @@ ul li {
 
 
 @include max-768 {
+    .quick-drop{
+        height: auto;
+    }
+    .contact , .newsletter  , .quick-links {
+        padding-bottom: 20px;
+        ul li:first-child , .nested{
+            padding-top: 10px;
+        }
+    }
+    .quick-links ul li:first-child{
+        padding-top: 5px;
+    }
     .contact ul li{
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     footer{
         padding: 50px 0 30px 0;
@@ -165,10 +175,6 @@ ul li {
             font-size: 13px;
         }
     }
-    .quick-drop{
-        flex-wrap: nowrap;
-        overflow-y: auto;
-    }
     .arrow-rotate::after {
         transform: translateY(-50%) rotate(180deg)  !important;
         top: 10px;
@@ -176,12 +182,17 @@ ul li {
    
     .quick-links ul li{
         font-size: 14px;
+        a{
+            color: $second-color;
+        }
     }
     .contact ul li a{
         font-size: 14px;
+        color: $second-color;
     }
     .newsletter p{
         font-size: 14px;
+        color: $second-color;
     }
     .copyright p{
         order: 5;
@@ -192,7 +203,6 @@ ul li {
     footer h4{
         margin-bottom: 0;
         text-transform: capitalize;
-        padding-bottom: 20px;
         cursor: pointer;
         font-size: 15px;
         position: relative;
