@@ -74,6 +74,10 @@ nav {
           margin-inline-start: 10px;
 }
 
+.closeSearh-btn i {
+  font-size: 23px !important;
+}
+
 .nav-ul {
   display: flex;
   justify-content: center;
@@ -894,7 +898,6 @@ footer h4 {
   height: 150px;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .contact ul {
