@@ -39,6 +39,7 @@
         font-weight: 700;
     }
     .btn_es{
+        line-height: 1px !important;
         color: #ffffff;
         font-size: 14px;
         font-weight: 500;
@@ -80,6 +81,7 @@
         font-size: 24px;
         color: #0056b8;
         margin-inline-start: 15px;
+        margin-bottom: 0;
     }
    > p {
         font-size: 19px;
@@ -96,7 +98,7 @@
     li{
         display: flex;
         width: 250px;
-        align-items: flex-end;
+        align-items: center;
     }
     i {
         color: #69c3e8;
@@ -129,9 +131,9 @@
         margin-bottom: 15px;
     }
     .about-desc p{
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 20px;
-        line-height: 30px;
+        line-height: 1.7;
     }
   
     .about-desc .btn_es{
@@ -142,9 +144,9 @@
         font-size: 17px;
     }
     .vision > p{
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 0;
-        line-height: 30px;
+        line-height: 1.7;
     }
     .vision{
         margin-top: 20px;
@@ -153,13 +155,23 @@
         margin: 5px 0;
     }
     .checked-list p{
-        font-size: 14px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 1.7;
     }
     .vision:nth-child(2) {
         margin-top: 40px !important;
     }
     .about-desc .btn_es{
         font-weight: 400;
+    }
+}
+
+
+@include max-992 {
+    .about-img img{
+        min-height: 640px;
+    }
+    .about-img-col{
+        margin-top: 10px;
     }
 }

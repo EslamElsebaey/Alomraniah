@@ -49,7 +49,7 @@ nav{
 }
 .closeSearh-btn{
     i{
-        font-size: 23px !important;
+        font-size: 25px !important;
     }
     
 }
@@ -86,6 +86,7 @@ nav{
     width: 238px;
     max-width: 100%;
     height: 40px;
+    // top: -150px;
 }
 .search-holder-input input{
     width: 100%;
@@ -121,6 +122,7 @@ nav{
     display: block;
     width: 100% !important;
     height: 100% !important;
+    color: #1d9add !important;
    
     transform: scaleX(-1);
    }
@@ -136,9 +138,11 @@ nav{
             content: "\f107";
             font-family: "line Awesome free";
             font-weight: 900;
+            position: absolute;
             font-size: 11px;
             height: 10px;
-            margin-inline-start: 4px;
+            top: 3px;
+            inset-inline-end: -13px;
         }
     }
     &:hover{
@@ -188,6 +192,10 @@ nav{
         color: $main-color;
        
     }
+}
+.open-search {
+    top: 0 !important;
+    transition: all linear .3s !important;
 }
 
 .closeNav-btn{
@@ -244,8 +252,9 @@ nav{
         }
     }
     .search-holder-parent{
-        transition: all linear .3s;
-        background-color: rgba($color: #000000, $alpha: .6);
+       background-color: rgba(0, 86, 184 , .95) ;
+
+       
         position: fixed;
         display: none;
         justify-content: center;
@@ -258,22 +267,24 @@ nav{
     }
     .search-holder{
         padding: 30px;
+        background-color: transparent;
         justify-content: space-between;
         height: 163px;
-        margin-top: 100px;
+       margin:  15px auto 0 auto ;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #fff;
-        width: 90%;
+        width: 100%;
         top: 21%;
         border-radius: 10px;
         i {
-            font-size: 20px;
-            color: $main-color;
+            font-size: 21px;
+            color: $white-color;
         }
         .search-holder-input{
+            transition: all linear .3s !important;
             width: 100%;
+            top: -150px;
         }
     }
     
@@ -312,7 +323,9 @@ nav{
         display: none;
             
             li a {
-                color: $second-color;
+                color: $main-color;
+                font-weight: 400;
+                font-size: 16px;
             }
         }
     }
@@ -365,8 +378,8 @@ nav{
     .closeNav-btn{
       display: block;
         i{
-            font-size: 25px;
-            color: $main-color;
+            font-size: 24px;
+            color: #adb5bd
         }
     }
     .close-search{
@@ -382,7 +395,6 @@ nav{
     }
     .lang2 a img  {
         margin-inline-start: 5px;
-        margin-bottom: -1px;
     }
    
 }

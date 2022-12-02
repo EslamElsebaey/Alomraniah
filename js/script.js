@@ -85,12 +85,26 @@ $(".closeNav-btn").click(function(){
 // show and hide search box
 
 $(".openSearch-btn").click(function(){
-  $(".search-holder-parent").addClass("showSearch-box");
+  $(".search-holder-parent").fadeToggle(200);
+  // $(".search-holder-parent").addClass("showSearch-box");
   $("body").css("overflow" , "hidden") ;
+ 
+    $(".search-holder-input").addClass("open-search");
+
+
 })
 $(".closeSearh-btn").click(function(){
-  $(".search-holder-parent").removeClass("showSearch-box");
+    $(".search-holder-input").removeClass("open-search");
+   
+  setTimeout(() => {
+    $(".search-holder-parent").fadeToggle(300);
+  }, 200);
   $("body").css("overflow" , "visible") ;
+  // $(".search-holder-parent").removeClass("showSearch-box");
+
+  
+ 
+ 
 })
 
 
