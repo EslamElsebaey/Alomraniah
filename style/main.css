@@ -176,8 +176,8 @@ nav {
   position: absolute;
   font-size: 11px;
   height: 10px;
-  top: 3px;
-  inset-inline-end: -13px;
+  top: 4px;
+  inset-inline-end: -11px;
 }
 .li-drop:hover .ul-drop {
   opacity: 1;
