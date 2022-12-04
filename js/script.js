@@ -115,7 +115,7 @@ if($(window).width() <= 768) {
   
 $(".li-drop").click(function (e) {
   e.preventDefault() ;
-  $(".ul-drop").slideToggle(500) ;
+  $(".ul-drop").slideToggle(400) ;
   $(this).children().toggleClass("icon-rotate");
   })
 }
