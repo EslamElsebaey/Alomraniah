@@ -370,7 +370,7 @@ nav {
     align-items: center;
     justify-content: center;
   }
-  .lang {
+  .header-content > .lang {
     display: none;
   }
   .banner-overlay {

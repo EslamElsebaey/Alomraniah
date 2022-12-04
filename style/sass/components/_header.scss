@@ -336,7 +336,7 @@ nav{
         width: 120px;
         max-width: 100%;
     }
-    .header-content{
+     .header-content{
         position: relative;
         width: 100%;
     }
@@ -345,7 +345,7 @@ nav{
         align-items: center;
         justify-content: center;
     }
-    .lang{
+    .header-content >  .lang{
         display: none;
     }
     .banner-overlay{
