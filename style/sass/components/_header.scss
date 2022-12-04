@@ -71,7 +71,6 @@ nav{
             color: $main-color;
             font-size: 16px;
             text-transform: capitalize;
-            font-weight: 400;
             transition: all linear .3s;
             position: relative;
             &:hover{
@@ -233,7 +232,7 @@ nav{
 
 @include max-768 {
     .openSearch-btn{
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
     }
@@ -327,7 +326,7 @@ nav{
         display: none;
             
             li a {
-                color: $main-color;
+                color: $black-color;
                 font-weight: 400;
                 font-size: 16px;
             }
@@ -376,6 +375,7 @@ nav{
               display: flex;
             justify-content: space-between;
             align-items: center;
+            font-weight: 500;
             &::after{
                 height: auto;
             }

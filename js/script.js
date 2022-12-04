@@ -86,7 +86,6 @@ $(".closeNav-btn").click(function(){
 
 $(".openSearch-btn").click(function(){
   $(".search-holder-parent").fadeToggle(200);
-  // $(".search-holder-parent").addClass("showSearch-box");
   $("body").css("overflow" , "hidden") ;
  
     $(".search-holder-input").addClass("open-search");
@@ -100,10 +99,6 @@ $(".closeSearh-btn").click(function(){
     $(".search-holder-parent").fadeToggle(300);
   }, 200);
   $("body").css("overflow" , "visible") ;
-  // $(".search-holder-parent").removeClass("showSearch-box");
-
-  
- 
  
 })
 
@@ -120,7 +115,7 @@ if($(window).width() <= 768) {
   
 $(".li-drop").click(function (e) {
   e.preventDefault() ;
-  $(".ul-drop").slideToggle(1000) ;
+  $(".ul-drop").slideToggle(500) ;
   $(this).children().toggleClass("icon-rotate");
   })
 }

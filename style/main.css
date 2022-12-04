@@ -98,7 +98,6 @@ nav {
   color: #0056b8;
   font-size: 16px;
   text-transform: capitalize;
-  font-weight: 400;
   transition: all linear 0.3s;
   position: relative;
 }
@@ -266,7 +265,7 @@ nav {
 }
 @media only screen and (max-width: 767px) {
   .openSearch-btn {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
@@ -354,7 +353,7 @@ nav {
     display: none;
   }
   .li-drop .ul-drop li a {
-    color: #0056b8;
+    color: #000000;
     font-weight: 400;
     font-size: 16px;
   }
@@ -403,6 +402,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
   }
   .nav-ul > li a::after {
     height: auto;
@@ -1071,16 +1071,11 @@ footer h4 {
   .quick-links ul li {
     font-size: 14px;
   }
-  .quick-links ul li a {
-    color: #1d9add;
-  }
   .contact ul li a {
     font-size: 14px;
-    color: #1d9add;
   }
   .newsletter p {
     font-size: 14px;
-    color: #1d9add;
   }
   .copyright p {
     order: 5;
