@@ -119,6 +119,7 @@
 @include max-768 {
     .checked-list li{
         align-items: center;
+        width: auto;
     }
     .checked-list i{
         font-size: 20px;
