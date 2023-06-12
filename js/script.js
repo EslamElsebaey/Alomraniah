@@ -73,11 +73,11 @@ const mainSwiper = new Swiper('.mainBanner .mainSwiper', {
 
 $(".openNav-btn").click(function(){
   $("nav").removeClass("open-nav");
-  $("body").css("overflow" , "hidden") ;
+  $("body").addClass("overflow-hidden") ;
 })
 $(".closeNav-btn").click(function(){
   $("nav").addClass("open-nav");
-  $("body").css("overflow" , "visible") ;
+  $("body").removeClass("overflow-hidden") ;
 })
 
 /************************************************************************ */
@@ -86,19 +86,15 @@ $(".closeNav-btn").click(function(){
 
 $(".openSearch-btn").click(function(){
   $(".search-holder-parent").fadeToggle(200);
-  $("body").css("overflow" , "hidden") ;
- 
-    $(".search-holder-input").addClass("open-search");
-
-
+  $("body").addClass("overflow-hidden") ;
+  $(".search-holder-input").addClass("open-search");
 })
 $(".closeSearh-btn").click(function(){
     $(".search-holder-input").removeClass("open-search");
-   
   setTimeout(() => {
     $(".search-holder-parent").fadeToggle(300);
   }, 200);
-  $("body").css("overflow" , "visible") ;
+  $("body").removeClass("overflow-hidden") ;
  
 })
 
@@ -109,13 +105,13 @@ $(".closeSearh-btn").click(function(){
 
 if($(window).width() <= 768) {
   $("footer h4").click(function(){
-    $(this).next().slideToggle(500);
+    $(this).next().slideToggle(300);
     $(this).toggleClass("arrow-rotate");
   })
   
 $(".li-drop").click(function (e) {
   e.preventDefault() ;
-  $(".ul-drop").slideToggle(400) ;
+  $(".ul-drop").slideToggle(300) ;
   $(this).children().toggleClass("icon-rotate");
   })
 }
